@@ -1,3 +1,4 @@
+
 // Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
@@ -14,6 +15,8 @@ function randomValueFromArray(array) {
 const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const places = ["the soup kitchen", "Disneyland", "the White House"];
 const events = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"];
+
+// Partial return random string function
 
 function returnRandomStoryString() {
     const randomCharacter = randomValueFromArray(characters);
