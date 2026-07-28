@@ -1,4 +1,4 @@
-// setup canvas
+// Set up canvas
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -6,19 +6,19 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
+// Function to generate random number
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random color
+// Function to generate random color
 
 function randomRGB() {
   return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
-// Creating the class Ball.
+// Create the class Ball.
 
 class Ball {
 
@@ -82,7 +82,11 @@ class Ball {
   }
 }
 
+// Create an array to fill with balls.
+
 const balls = [];
+
+// While loop to create a random assorted of balls in the array.
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -114,5 +118,7 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
+
+// Call on the loop function.
 
 loop();
