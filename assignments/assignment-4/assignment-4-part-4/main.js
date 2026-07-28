@@ -27,7 +27,7 @@ class Shape {
 
   // Constructor method used to create variables to define each shape.
 
-  constructor(x, y, velX, VelY) {
+  constructor(x, y, velX, velY) {
     this.x = x;
     this.y = y;
     this.velX = velX;
@@ -168,7 +168,7 @@ class EvilCircle extends Shape {
         if (distance < this.size + ball.size) {
           ball.exists = false;
           count--;
-          parseFloat.textContent = 'Ball count: ' + count;
+          para.textContent = 'Ball count: ' + count;
         }
       }
     }
@@ -197,7 +197,7 @@ while (balls.length < 25) {
 
   balls.push(ball);
   count++;
-  parseFloat.textContent = 'Ball count: ' + count;
+  para.textContent = 'Ball count: ' + count;
 }
 
 // Create EvilBall at random location.
