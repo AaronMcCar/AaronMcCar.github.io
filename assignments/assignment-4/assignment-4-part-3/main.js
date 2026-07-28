@@ -23,7 +23,7 @@ function randomRGB() {
 class Ball {
 
   // Cronstructor method used to create the variables to define each ball.
-  
+
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
@@ -45,21 +45,13 @@ class Ball {
   // Update method to allow the ball to move.
 
   update() {
-    if (this.x + this.size >= width) {
-      this.velX = -Math.abs(this.velX);
-    }
+    if (this.x + this.size >= width) this.velX = -Math.abs(this.velX);
 
-    if (this.x - this.size <= 0) {
-      this.velX = -Math.abs(this.velX);
-    }
+    if (this.x - this.size <= 0) this.velX = -Math.abs(this.velX);
 
-    if (this.y + this.size >= height) {
-      this.velY = -Math.abs(this.velY);
-    }
+    if (this.y + this.size >= height) this.velY = -Math.abs(this.velY);
 
-    if (this.y - this.size <= 0) {
-      this.velY = -Math.abs(this.velY);
-    }
+    if (this.y - this.size <= 0) this.velY = -Math.abs(this.velY);
 
     this.x += this.velX;
     this.y += this.velY;
@@ -103,7 +95,7 @@ while (balls.length < 25) {
 // Loop function to replay the code.
 
 function loop() {
-  ctx.fillStyle = "rgba(0 0 0 / 0.25)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
