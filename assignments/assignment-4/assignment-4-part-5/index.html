@@ -14,69 +14,92 @@
         -->
     </head>
     <body>
-    We want your feedback!
-
-    We're very excited that you visited the little house in the woods,
-    and we want to hear what you thought of it! Please fill in the below
-    sections. You don't need to provide your name or contact details, but
-    if you do, we'll enter you into a prize draw where you'll have a chance
-    to win prizes.
-
-    --
-
-    Facilities
-
-    Was the porridge
-    Too hot?
-    Too cold?
-    Just right?
-
-    Were the beds
-    Too hard?
-    Too soft?
-    Just right?
-
-    Describe the chairs (select all you agree with)
-    Comfy
-    Luxurious
-    Hi-tech
-    Pretty
-    Majestic
-
-    --
-
-    About your hosts
-
-    Who's your favorite bear?
-    Papa bear
-    Mama bear
-    Junior
-    Dozer
-
-    Which greeting did you prefer?
-    Wave
-    Friendly greeting
-    Growl
-    Claw marks in the door
-
-    --
-
-    Any other feedback?
-
-    Give us your comments
-
-    --
-
-    Your details
-
-    Name
-    Email
-    Phone
-
-    --
-
-    Submit
-
-    --
+        <h1>We want your feedback!</h1>
+        <p>
+        We're very excited that you visited the <a href=#>little house in the woods</a>,
+        and we want to hear what you thought of it! Please fill in the below
+        sections. You don't need to provide your name or contact details, but
+        if you do, we'll enter you into a <a href=#>prize draw</a> where you'll have a chance
+        to win prizes.
+        </p>
+        <img src="https://mdn.github.io/shared-assests/images/examples/learn/woodland-strip.jpg" alt="">
+        <form>
+            <div class="form-section">
+                <h2>Facilities</h2>
+                <fieldset>
+                    <legend>>Was the porridge</legend>
+                    <input type="radio" id="porridge-1" name="porridge" value="hot" checked>
+                    <label for="porridge-1">Too hot?</label>
+                    <input type="radio" id="porridge-2" name="porridge" value="cold" checked>
+                    <label for="porridge-2">Too cold?</label>
+                    <input type="radio" id="porridge-3" name="porridge" value="right" checked>
+                    <label for="porridge-3">Just right?</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Were the beds</legend>
+                    <input type="radio" id="beds-1" name="beds" value="hard" checked>
+                    <label for="beds-1">Too hard?</label>
+                    <input type="radio" id="beds-2" name="beds" value="soft" checked>
+                    <label for="beds-1">Too soft?</label>
+                    <input type="radio" id="beds-3" name="beds" value="comfy" checked>
+                    <label for="beds-1">Just right?</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Describe the chairs (select all you agree with)</legend>
+                    <input type="checkbox" id="comfy" name="comfy" for="comfy" checked>
+                    Comfy
+                    <input type="checkbox" id="Luxurious" name="Luxurious" for="Luxurious" checked>
+                    Luxurious
+                    <input type="checkbox" id="Hi-tech" name="Hi-tech" for="Hi-tech" checked>
+                    Hi-tech
+                    <input type="checkbox" id="Pretty" name="Pretty" for="Pretty" checked>
+                    Pretty
+                    <input type="checkbox" id="Majestic" name="Majestic" for="Majestic" checked>
+                    Majestic
+                </fieldset>
+            </div>
+            <div class="form-section">
+                <h2>About your hosts</h2>
+                <div class="separator">
+                    <label for="favourite">Who's your favorite bear?</label>
+                    <select name="favourite" id="favourite">
+                        <option value="papa">Papa bear</option>
+                        <option value="mama"></option>Mama bear</option>
+                        <option value="junior"></option>Junior</option>
+                        <option value="dozer"></option>Dozer</option>
+                    </select>
+                </div>
+                <div class="seperator">
+                    <label for="greeting">Which greeting did you prefer?</label>
+                    <select name="greeting" id="greeting">
+                    <option value="wave">Wave</option>
+                    <option value="friendly">Friendly greeting</option>
+                    <option value="growl">Growl</option>
+                    <option value="claw">Claw marks in the door</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Any other feedback?</h2>
+                <label for="comments">Give us your comments</label>
+                <br />
+            </div>
+            <div class="sperator">
+                <h2>Your details</h2>
+                <div for="name">Name</div>
+                <input type="text" id="name" name="name" />
+            </div>
+            <div class="sperator"></div>
+                <div for="email">Email</div>
+                <input type="email" id="email" name="email" />
+            </div>
+            <div class="sperator"></div>
+                <div for="name">Phone</div>
+                <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-section">
+                <button>Submit</button>
+            </div>
+        </form>
     </body>
 </html>
