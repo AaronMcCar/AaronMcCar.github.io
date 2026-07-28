@@ -1,5 +1,8 @@
 // Set up canvas
 
+const para = document.querySelector('p');
+let count = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -28,7 +31,7 @@ class Shape {
     this.x = x;
     this.y = y;
     this.velX = velX;
-    this.velY = this.velY;
+    this.velY = velY;
   }
 }
 
@@ -42,7 +45,7 @@ class Ball extends Shape {
     super(x, y, velX, velY)
     this.color = color;
     this.size = size;
-    this.exists = True;
+    this.exists = true;
   }
 
   // Draw method to create the balls.
@@ -193,6 +196,8 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  count++;
+  parseFloat.textContent = 'Ball count: ' + count;
 }
 
 // Create EvilBall at random location.
