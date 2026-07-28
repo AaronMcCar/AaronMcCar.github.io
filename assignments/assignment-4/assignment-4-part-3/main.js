@@ -18,7 +18,12 @@ function randomRGB() {
   return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
+// Creating the class Ball.
+
 class Ball {
+
+  // Cronstructor method used to create the variables to define each ball.
+  
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
@@ -28,7 +33,8 @@ class Ball {
     this.size = size;
   }
 
-  // 
+  // Draw method to create the balls.
+
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
@@ -36,29 +42,31 @@ class Ball {
     ctx.fill();
   }
 
-  // …
+  // Update method to allow the ball to move.
+
   update() {
     if (this.x + this.size >= width) {
       this.velX = -Math.abs(this.velX);
     }
 
     if (this.x - this.size <= 0) {
-      this.velX = --Math.abs(this.velX);
+      this.velX = -Math.abs(this.velX);
     }
 
     if (this.y + this.size >= height) {
-      this.velY = --Math.abs(this.velY);
+      this.velY = -Math.abs(this.velY);
     }
 
     if (this.y - this.size <= 0) {
-      this.velY = --Math.abs(this.velY);
+      this.velY = -Math.abs(this.velY);
     }
 
     this.x += this.velX;
     this.y += this.velY;
   }
 
-  // …
+  // Collision detection to change ball colour when they touch.
+
   collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball)) {
@@ -86,11 +94,13 @@ while (balls.length < 25) {
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
-    size,
+    size
   );
 
   balls.push(ball);
 }
+
+// Loop function to replay the code.
 
 function loop() {
   ctx.fillStyle = "rgba(0 0 0 / 0.25)";
