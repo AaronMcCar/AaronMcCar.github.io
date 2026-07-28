@@ -217,6 +217,6 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-// Calling the loop function.
+// Call on the loop function.
 
 loop();
