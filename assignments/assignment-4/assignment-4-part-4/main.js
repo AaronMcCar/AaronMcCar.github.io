@@ -1,4 +1,4 @@
-// set up canvas
+// setup canvas
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -12,13 +12,18 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random RGB color value
+// function to generate random color
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
 }
 
+// Creating the class Ball.
+
 class Ball {
+
+  // Cronstructor method used to create the variables to define each ball.
+
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
@@ -28,12 +33,16 @@ class Ball {
     this.size = size;
   }
 
+  // Draw method to create the balls.
+
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
+
+  // Update method to allow the ball to move.
 
   update() {
     if (this.x + this.size >= width) {
@@ -55,6 +64,8 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
   }
+
+  // Collision detection to change ball colour when they touch.
 
   collisionDetect() {
     for (const ball of balls) {
@@ -88,6 +99,8 @@ while (balls.length < 25) {
 
   balls.push(ball);
 }
+
+// Loop function to replay the code.
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
