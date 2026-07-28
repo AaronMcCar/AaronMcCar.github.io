@@ -39,19 +39,19 @@ class Ball {
   // …
   update() {
     if (this.x + this.size >= width) {
-      this.velX = -this.velX;
+      this.velX = -Math.abs(this.velX);
     }
 
     if (this.x - this.size <= 0) {
-      this.velX = -this.velX;
+      this.velX = --Math.abs(this.velX);
     }
 
     if (this.y + this.size >= height) {
-      this.velY = -this.velY;
+      this.velY = --Math.abs(this.velY);
     }
 
     if (this.y - this.size <= 0) {
-      this.velY = -this.velY;
+      this.velY = --Math.abs(this.velY);
     }
 
     this.x += this.velX;
@@ -61,7 +61,7 @@ class Ball {
   // …
   collisionDetect() {
     for (const ball of balls) {
-      if (this !== ball) {
+      if (!(this === ball)) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -93,7 +93,7 @@ while (balls.length < 25) {
 }
 
 function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillStyle = "rgba(0 0 0 / 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
