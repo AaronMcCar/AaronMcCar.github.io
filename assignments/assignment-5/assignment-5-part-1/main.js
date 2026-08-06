@@ -31,7 +31,7 @@ form.onsubmit = function(e) {
 function submitComment() {
   const listItem = document.createElement('li');
   const nameLabel = document.createElement('span');
-  const commentlabel = document.createElement('span');
+  const commentLabel = document.createElement('span');
   const namePara = document.createElement('p');
   const commentPara = document.createElement('p');
   const nameValue = nameField.value;
@@ -65,12 +65,12 @@ console.log("here")
 const transcript = document.querySelector('.transcript');
 const transcriptBtn = document.querySelector('.transcript-container button');
 
-transcriptsBtn.addEventListener("click", toggleTranscript);
+transcriptBtn.addEventListener("click", toggleTranscript);
 
 function toggleTranscript() {
   if(transcriptBtn.textContent === 'Show transcript') {
     transcript.style.height = '150px';
-    transcript.textContent = 'Hide transcript';
+    transcriptBtn.textContent = 'Hide transcript';
   } else {
     transcript.style.height = '0';
     transcriptBtn.textContent = 'Show transcript';
